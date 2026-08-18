@@ -1,0 +1,9 @@
+# Just enough to run scripts/build_index.py in the image's first stage.
+#
+# Deliberately not requirements.txt: the index build imports only
+# purple_agent.corpus.index -> config (dotenv), loader (yaml), and chromadb.
+# Keeping it separate means a change to google-adk or litellm does not invalidate
+# the ~3 minute index layer.
+python-dotenv>=1.0
+pyyaml>=6.0
+chromadb>=0.5

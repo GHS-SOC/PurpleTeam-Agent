@@ -1,0 +1,7 @@
+# Development-only dependencies. Not installed in the runtime image.
+#
+# pySigma is the reference Sigma implementation. scripts/crosscheck_oracle.py
+# uses it to check our oracle against an interpretation of the spec we did not
+# write -- the only check in this project that is not marking its own homework.
+# It found the escape-sequence bug that both our matcher and our inverter shared.
+pysigma>=0.11

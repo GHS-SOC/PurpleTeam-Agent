@@ -1,0 +1,19 @@
+# Agent runtime
+google-adk>=2.5.0
+# mcp 2.0 removed McpHttpClientFactory from mcp.client.streamable_http, which
+# google-adk still imports -- installing it breaks the MCP toolset at import time.
+mcp>=1.5,<2
+litellm>=1.60
+python-dotenv>=1.0
+
+# Google SecOps auth + transport. Every call is a plain authenticated request
+# straight to the Chronicle REST API (purple_agent/secops_rest.py) -- no MCP,
+# no vendor SDK.
+google-auth>=2.30
+httpx>=0.27
+
+# Sigma corpus
+pyyaml>=6.0
+chromadb>=0.5
+
+pytest>=8.0

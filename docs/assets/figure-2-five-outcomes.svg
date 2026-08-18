@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" width="940" height="470" role="img" aria-label="Five outcomes that look identical: only one is a coverage gap">
+  <rect width="940" height="470" fill="#ffffff"/>
+
+  <text x="40" y="46" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Five outcomes that look identical</text>
+  <text x="40" y="72" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#64748b">The SIEM reports nothing. Only one of these is a coverage gap.</text>
+
+  <line x1="40" y1="90" x2="900" y2="90" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Row 1 : generation -->
+  <g>
+    <circle cx="54" cy="126" r="12" fill="#f1f5f9"/>
+    <text x="54" y="131" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">1</text>
+    <text x="82" y="122" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">The oracle says the generated events</text>
+    <text x="82" y="140" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">satisfy no target rule</text>
+    <path d="M470 126 L500 126" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="512" y="110" width="150" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="587" y="131" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">GENERATION</text>
+    <text x="678" y="131" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">fix the generator</text>
+  </g>
+
+  <!-- Row 2 : too early -->
+  <g>
+    <circle cx="54" cy="190" r="12" fill="#f1f5f9"/>
+    <text x="54" y="195" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">2</text>
+    <text x="82" y="186" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">You searched before the verification</text>
+    <text x="82" y="204" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">window had elapsed</text>
+    <path d="M470 190 L500 190" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="512" y="174" width="150" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="587" y="195" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">TOO EARLY</text>
+    <text x="678" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">not a finding at all</text>
+  </g>
+
+  <!-- Row 3 : parser -->
+  <g>
+    <circle cx="54" cy="254" r="12" fill="#f1f5f9"/>
+    <text x="54" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">3</text>
+    <text x="82" y="250" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">Still empty after every query shape</text>
+    <text x="82" y="268" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">and the full window</text>
+    <path d="M470 254 L500 254" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="512" y="238" width="150" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="587" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">PARSER / INGEST</text>
+    <text x="678" y="259" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">never became searchable</text>
+  </g>
+
+  <!-- Row 4 : the real one -->
+  <g>
+    <rect x="34" y="296" width="866" height="52" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="60" cy="322" r="12" fill="#2563eb"/>
+    <text x="60" y="327" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+    <text x="88" y="318" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a8a">The events parsed into the SIEM,</text>
+    <text x="88" y="336" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a8a">and no rule matched them</text>
+    <path d="M470 322 L500 322" stroke="#2563eb" stroke-width="1.5" marker-end="url(#b)"/>
+    <rect x="512" y="306" width="150" height="32" rx="6" fill="#2563eb"/>
+    <text x="587" y="327" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">COVERAGE GAP</text>
+    <text x="678" y="327" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb">the real finding</text>
+  </g>
+
+  <!-- Row 5 : config -->
+  <g>
+    <circle cx="54" cy="386" r="12" fill="#f1f5f9"/>
+    <text x="54" y="391" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">5</text>
+    <text x="82" y="382" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">A rule matched, but no alert or</text>
+    <text x="82" y="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#334155">case appeared</text>
+    <path d="M470 386 L500 386" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="512" y="370" width="150" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="587" y="391" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">CONFIG</text>
+    <text x="678" y="391" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">not alert-enabled, or no playbook</text>
+  </g>
+
+  <line x1="40" y1="428" x2="900" y2="428" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="452" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#64748b">Reporting any of the other four as a coverage gap sends a detection engineer hunting a failure that does not exist.</text>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

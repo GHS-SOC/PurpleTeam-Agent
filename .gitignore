@@ -1,0 +1,51 @@
+# Secrets -- never commit. See .env.example for the shape.
+.env
+purple_agent/.env
+
+# Service account keys. A downloaded key is a long-lived credential to a live
+# SIEM: one `git add .` away from being public forever. No .json file in this
+# repo is source, so ignoring the shapes outright costs nothing.
+*.json
+*.pem
+*.p12
+credentials/
+
+.venv/
+__pycache__/
+*.py[cod]
+
+# Sigma corpus clone (~100MB) and the derived index. Rebuild with
+# scripts/refresh_sigma.ps1 + scripts/build_index.py.
+vendor/
+data/
+
+# Generated event payloads from agent runs.
+out/
+
+# ADK runtime session store (conversation history, tool results) -- never commit.
+.adk/
+**/.adk/
+
+# Local Claude Code / editor settings.
+.claude/
+
+# Agent instructions for working in this repo. Useful during development, but it
+# describes internal conventions and the live tenant, so it is never published:
+# the canonical copy lives in the internal repo. Kept local and untracked so it
+# cannot be committed here by accident.
+CLAUDE.md
+
+# Working implementation plans -- drafts, not project documentation.
+plans/
+
+# Internal working notes: backlogs, review notes, blog and social drafts,
+# positioning. These carry real tenant identifiers, case ids and company detail
+# that must never reach the public repo, and they sit in the same directory as
+# the README's figures -- so ignore the directory and allow only the figures
+# back in. Ignoring by default is the safe direction: a new internal note is
+# excluded automatically, where a new figure has to be added deliberately.
+docs/*
+!docs/assets/
+!docs/guide/
+
+.pytest_cache/
